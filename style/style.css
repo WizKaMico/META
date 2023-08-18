@@ -1,0 +1,779 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+
+/* Base */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #a1a2af;
+  transition: 0.5s ease;
+}
+
+.dashboard {
+  max-width: 1250px;
+  min-height: 800px;
+  background: #f2f2f2;
+  margin: 50px auto;
+  display: flex;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.12);
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* End Base */
+
+/* Dashboard */
+
+/* =====Sidebar======= */
+.sidebar {
+  flex: 0 0 20%;
+  font-size: 22px;
+  padding: 25px;
+  align-items: flex-start;
+  background: #fff;
+  transition: background 0.5s ease-out;
+}
+
+.side-nav {
+  flex: 0 0 75%;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #1e1e2d;
+  cursor: pointer;
+}
+
+.menu-item {
+  margin: 30px auto;
+  font-weight: 400;
+  transition: 0.4s linear;
+  cursor: pointer;
+  justify-content: start;
+}
+
+.menu-item p {
+  margin-left: 10px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  color: #1e1e2d;
+}
+
+.border {
+  width: 100%;
+  height: 3px;
+  background: #f7f7f7;
+  border-radius: 1px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12);
+  margin: 50px 0;
+}
+
+.log-out .menu-item {
+  color: #fb6b63;
+}
+
+.log-out .menu-item:hover {
+  color: #f2615a;
+}
+
+/* =====Dashboard Content======= */
+.dashboard-content {
+  flex: 1;
+  padding: 25px;
+  background: #f9f9f9;
+  transition: 0.5s ease-out;
+}
+
+/* =====Topbar======= */
+.search {
+  flex: 1;
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.search input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #a1a2af;
+}
+
+.search ::-webkit-input-placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #a1a2af;
+  font-family: inherit;
+}
+
+.theme {
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.dark,
+.light {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dark.active,
+.light.active {
+  background: #f9f9f9;
+}
+
+.light {
+  color: #fdb600;
+}
+
+.user {
+  background: #fff;
+  padding: 5px 10px;
+  color: #1e1e2d;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.user img {
+  width: 40px;
+}
+
+.user p {
+  margin: 0 6px;
+}
+
+.notification {
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+/* =====Section======= */
+
+.section {
+  margin: 30px 0;
+}
+
+/* =====Section Left======= */
+
+.section-left {
+  flex: 1;
+  padding: 15px;
+}
+
+.banner {
+  width: 100%;
+  height: 210px;
+  border-radius: 18px;
+  background: #55c960 url(https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/bannerBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.banner h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.banner img {
+  width: 420px;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  pointer-events: none;
+}
+
+.btn {
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline-block;
+  background: #161622;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  transition: 0.4s linear;
+}
+
+.nfts {
+  padding: 0 8px;
+  margin: 25px 0;
+}
+
+.heading h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e1e2d;
+}
+
+.heading p {
+  font-size: 18px;
+  color: #38c947;
+  cursor: pointer;
+}
+
+/* =====Categories======= */
+
+.categories {
+  margin: 20px 0;
+}
+
+.category {
+  background: #fff;
+  padding: 6px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #161622;
+  transition: 0.3s linear;
+}
+
+.category .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 22px;
+  background: #f2f2f2;
+  transition: 0.3s linear;
+}
+
+/* =====Browse NFTs======= */
+
+.browse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nft {
+  background: #fff;
+  padding: 10px 20px 20px 20px;
+  border-radius: 25px;
+  transition: 0.4s linear;
+  margin: 10px 5px;
+}
+
+.nft img {
+  width: 100%;
+  height: 240px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.author img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 18px;
+  color: #161622;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.author {
+  font-size: 14px;
+}
+
+.price {
+  background: rgba(124, 248, 136, 0.346);
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #38c947;
+  font-weight: 600;
+}
+
+/* =====Section Right======= */
+
+.section-right {
+  padding: 12px;
+  flex: 0 0 30%;
+  margin-top: -390px;
+}
+
+.graph {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  border-radius: 20px;
+  padding-top: 30px;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.graph h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #161622;
+}
+
+.graph img {
+  width: 100%;
+  pointer-events: none;
+}
+
+.top-creators {
+  width: 100%;
+  margin-top: 40px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 20px;
+  transition: 0.3s linear;
+}
+
+.top-creators .heading {
+  margin-bottom: 20px;
+}
+
+.top-creators .heading h2 {
+  font-size: 18px;
+}
+
+.follow-creator img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.follow-creator h3 {
+  font-size: 13px;
+  color: #13131d;
+}
+
+.follow-creator p {
+  font-size: 12px;
+}
+
+.following {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 8px 15px;
+  margin-bottom: 18px;
+}
+
+.follow {
+  background: #fdfdfd;
+  color: #13131d;
+  border: 1px solid rgba(161, 162, 175, 0.3);
+}
+
+/* End Dashboard */
+
+/* Dark Mode */
+.darkMode {
+  background: #13131d;
+}
+
+.darkMode .dashboard {
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.22);
+}
+
+.darkMode .sidebar {
+  background: #161622;
+}
+
+.darkMode .menu-item:hover,
+.darkMode .menu-item.active,
+.darkMode .brand {
+  color: #fff;
+}
+
+.darkMode .log-out .menu-item:hover {
+  color: #f2615a;
+}
+
+.darkMode .border {
+  background: #262635;
+}
+
+.darkMode .dashboard-content {
+  background: #1e1e2d;
+}
+
+.darkMode .search,
+.darkMode .search input,
+.darkMode .user,
+.darkMode .theme,
+.darkMode .notification {
+  background: #161622;
+}
+
+.darkMode .user,
+.darkMode .notification,
+.darkMode .heading h2 {
+  color: #fff;
+}
+
+.darkMode .dark.active,
+.darkMode .light.active {
+  background: #1e1e2d;
+}
+
+.darkMode .banner {
+  background: #38c947 url(https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/bannerBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #161622;
+}
+
+.darkMode .btn {
+  background: #fff;
+  color: #161622;
+}
+
+.darkMode .category {
+  color: #fff;
+  background: #161622;
+}
+
+.darkMode .category .icon {
+  background: #262635;
+}
+
+.darkMode .nft {
+  background: #161622;
+}
+
+.darkMode .title {
+  color: #fff;
+}
+
+.darkMode .top-creators,
+.darkMode .graph {
+  background: #13131d;
+  border: none;
+}
+
+.darkMode .follow {
+  background: #13131d;
+  color: #fff;
+}
+
+.darkMode .graph h2,
+.darkMode .creator-details h3 {
+  color: #fff;
+}
+/* End Dark Mode */
+
+/* Responsive */
+@media (max-width: 1250px) {
+  .dashboard {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    padding: 20px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .category {
+    padding: 4px 12px;
+  }
+
+  .creator {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .following {
+    margin: 5px 0;
+  }
+
+  .section-right {
+    margin-top: -265px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .dashboard-content {
+    padding: 30px;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .section-left {
+    width: 100%;
+  }
+
+  .section-right {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+  }
+
+  .graph {
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid rgba(161, 162, 175, 0.3);
+  }
+
+  .top-creators {
+    width: 40%;
+    margin: 40px auto;
+    border: 1px solid rgba(161, 162, 175, 0.3);
+  }
+
+  .creator {
+    flex-direction: row;
+  }
+
+  .nft {
+    margin: 15px;
+  }
+
+  .nft img {
+    height: auto;
+  }
+
+  .sidebar {
+    padding: 20px 10px;
+    flex: 0 0 10%;
+    align-items: center;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .menu-item {
+    margin: 40px auto;
+  }
+
+  .menu-item p {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .dashboard-content {
+    padding: 0;
+  }
+
+  .banner {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .banner h2 {
+    font-size: 35px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .search {
+    flex: 0 0 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .search input {
+    display: none;
+  }
+
+  .topbar {
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .trending {
+    padding: 0 20px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category {
+    margin: 10px auto;
+  }
+
+  .section-right {
+    flex-direction: column-reverse;
+  }
+
+  .top-creators {
+    width: 70%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    display: none;
+  }
+
+  .user {
+    margin-right: 10px;
+  }
+
+  .browse {
+    grid-template-columns: 1fr;
+  }
+
+  .section-left,
+  .section-right {
+    padding: 0;
+  }
+
+  .graph,
+  .top-creators,
+  .banner {
+    width: 90%;
+  }
+
+  .nft {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .notification,
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .banner,
+  .browse {
+    width: 100%;
+  }
+
+  .graph,
+  .top-creators {
+    width: 95%;
+  }
+
+  .banner {
+    border-radius: 0;
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 300px) {
+  .topbar {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .user {
+    margin-bottom: 10px;
+  }
+
+  .banner h2 {
+    font-size: 30px;
+  }
+
+  .price {
+    text-align: center;
+    padding: 5px;
+  }
+}
+
+/* End  Responsive */
+
+
+
+/* YT LINK */
+
+
+.youtube {
+  position: fixed;
+  bottom: 40px;
+  right: 70px;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.youtube p {
+  font-size: 22px;
+}
+
+
+

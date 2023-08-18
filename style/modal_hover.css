@@ -1,0 +1,55 @@
+/* MODAL & HOVEER */
+
+
+   /* Regular styles for the nft container */
+   .nft {
+    /* Your regular styling here */
+    /* For example: */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect styles */
+.nft:hover {
+    transform: scale(1.05); /* You can adjust the scale factor as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box-shadow for the hover effect */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 25%; /* Centered with 50% width */
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: content-box;
+}
+
+/* Modal Content */
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
